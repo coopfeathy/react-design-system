@@ -52,7 +52,7 @@ jobs:
         run: npm ci
       - name: Install browsers
         run: npx playwright install --with-deps
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: storybook
           path: storybook-static
@@ -89,7 +89,7 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           ref: ${{ github.head_ref }}
           token: ${{ steps.generate_token.outputs.token }}
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: snapshots
           path: .playwright/snapshots

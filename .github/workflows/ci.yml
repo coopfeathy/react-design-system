@@ -124,7 +124,7 @@ jobs:
         run: npm ci
       - name: Install browsers
         run: npx playwright install --with-deps
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: storybook
           path: storybook-static
@@ -168,7 +168,7 @@ jobs:
         run: npm ci
       - name: Install browsers
         run: npx playwright install --with-deps
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v4
         with:
           name: storybook
           path: storybook-static
