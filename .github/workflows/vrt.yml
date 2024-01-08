@@ -27,7 +27,7 @@ jobs:
         run: npm ci
       - name: Build storybook
         run: npx build-storybook
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: storybook
           path: storybook-static
@@ -69,7 +69,7 @@ jobs:
         if: ${{ always() }}
         run: kill ${{ steps.storybook.outputs.pid }}
       - name: Upload snapshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: snapshots
           path: .playwright/snapshots

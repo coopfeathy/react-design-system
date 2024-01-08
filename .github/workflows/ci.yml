@@ -102,7 +102,7 @@ jobs:
         run: npm ci
       - name: Build storybook
         run: npx build-storybook
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: storybook
           path: storybook-static
@@ -141,7 +141,7 @@ jobs:
         run: kill ${{ steps.storybook.outputs.pid }}
       - name: Upload report
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: vrt-${{ matrix.shard }}
           path: .playwright/report
@@ -185,7 +185,7 @@ jobs:
         run: kill ${{ steps.storybook.outputs.pid }}
       - name: Upload report
         if: ${{ always() }}
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: aat
           path: .playwright/report
