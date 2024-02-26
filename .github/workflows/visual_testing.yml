@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Chromatic
-        uses: chromaui/action@v1
+        uses: chromaui/action@v11
         with:
           buildScriptName: build:storybook:visual-testing
           projectToken: ${{ secrets.CHROMATIC_KEY }}
