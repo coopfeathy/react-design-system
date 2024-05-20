@@ -17,7 +17,7 @@ jobs:
     # see https://github.com/primer/react/pull/2207 for details
     if: ${{ github.event.pull_request.head.repo.full_name == 'primer/react' }} # source repository for pull_request
     name: Preview
-    uses: primer/.github/.github/workflows/deploy_preview.yml@0cec9b9914f358846163f2428663b58da41028c9
+    uses: primer/.github/.github/workflows/deploy_preview.yml@e395d0ac38edf3c2cf8281663ab7391251e6801f
     permissions:
       contents: read
       pages: write
